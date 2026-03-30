@@ -13,11 +13,11 @@
 
     <title>
         
-          Hexo 博客维护手册 - shane的博客 | Shane&#39;s Blog
+          npm 安装 SSL 证书错误解决记录 - shane的博客 | Shane&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="https://chengxinsun.github.io/2026/01/21/Hexo-博客维护手册/">
+    <link rel="canonical" href="https://chengxinsun.github.io/2026/03/30/npm-安装-SSL-证书错误解决记录/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -171,14 +171,14 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                          <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
+                          <a class="tag" href="/tags/#npm" title="npm">npm</a>
                         
                     </div>
-                    <h1>Hexo 博客维护手册</h1>
+                    <h1>npm 安装 SSL 证书错误解决记录</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by Shane on
-                        2026-01-21
+                        2026-03-30
                     </span>
                 </div>
             </div>
@@ -197,77 +197,98 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <hr>
-<h1 id="Hexo-博客维护手册"><a href="#Hexo-博客维护手册" class="headerlink" title="Hexo 博客维护手册"></a>Hexo 博客维护手册</h1><h2 id="1-环境检查"><a href="#1-环境检查" class="headerlink" title="1. 环境检查"></a>1. 环境检查</h2><p>如果换了电脑或重装系统，请先执行：</p>
-<ul>
-<li><strong>安装依赖</strong>：在项目根目录下运行 <code>npm install</code>。</li>
-<li><strong>全局工具</strong>：确保已安装 <code>npm install -g hexo-cli</code>。</li>
-</ul>
-<hr>
-<h2 id="2-核心命令手册"><a href="#2-核心命令手册" class="headerlink" title="2. 核心命令手册"></a>2. 核心命令手册</h2><table>
+                <h1 id="npm-安装-SSL-证书错误解决记录"><a href="#npm-安装-SSL-证书错误解决记录" class="headerlink" title="npm 安装 SSL 证书错误解决记录"></a>npm 安装 SSL 证书错误解决记录</h1><h2 id="环境信息"><a href="#环境信息" class="headerlink" title="环境信息"></a>环境信息</h2><table>
 <thead>
 <tr>
-<th>功能</th>
-<th>命令</th>
-<th>简写</th>
-<th>备注</th>
+<th>项目</th>
+<th>详情</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>新建文章</strong></td>
-<td><code>hexo new &quot;标题&quot;</code></td>
-<td><code>hexo n</code></td>
-<td>在 <code>source/_posts</code> 生成 .md 文件</td>
+<td><strong>操作系统</strong></td>
+<td>macOS Tahoe 26.2</td>
 </tr>
 <tr>
-<td><strong>清理缓存</strong></td>
-<td><code>hexo clean</code></td>
-<td>无</td>
-<td>遇到页面不更新时必做</td>
+<td><strong>Node.js 版本</strong></td>
+<td>v22.16.0</td>
 </tr>
 <tr>
-<td><strong>生成静态页</strong></td>
-<td><code>hexo generate</code></td>
-<td><code>hexo g</code></td>
-<td>将 Markdown 转为 HTML</td>
+<td><strong>包管理器</strong></td>
+<td>npm (v10.x, 随 Node v22 捆绑)</td>
 </tr>
 <tr>
-<td><strong>启动预览</strong></td>
-<td><code>hexo server</code></td>
-<td><code>hexo s</code></td>
-<td>默认地址：<code>http://localhost:4000</code></td>
+<td><strong>网络环境</strong></td>
+<td>非公司网络，无代理/VPN</td>
 </tr>
 <tr>
-<td><strong>部署发布</strong></td>
-<td><code>hexo deploy</code></td>
-<td><code>hexo d</code></td>
-<td>上传至 GitHub Pages</td>
+<td><strong>Registry</strong></td>
+<td><a href="https://registry.npmjs.org/">https://registry.npmjs.org/</a> (官方源)</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="3-全流程操作指南-从新建到发布"><a href="#3-全流程操作指南-从新建到发布" class="headerlink" title="3. 全流程操作指南 (从新建到发布)"></a>3. 全流程操作指南 (从新建到发布)</h2><p>当你想要写一篇新博客时，请遵循以下标准流程：</p>
-<h3 id="第一步：创建新文件"><a href="#第一步：创建新文件" class="headerlink" title="第一步：创建新文件"></a>第一步：创建新文件</h3><p>在终端输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;我的新博文&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>此时，Hexo 会在 <code>source/_posts/</code> 目录下创建一个 <code>我的新博文.md</code> 文件。</p>
-<h3 id="第二步：撰写内容"><a href="#第二步：撰写内容" class="headerlink" title="第二步：撰写内容"></a>第二步：撰写内容</h3><p>使用编辑器打开该 <code>.md</code> 文件，编辑 <strong>Front Matter</strong>（开头部分）：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的新博文</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2026-01-21 10:45:00</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">技术</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">教程</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">笔记</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">这里是正文...</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="第三步：本地预览-关键"><a href="#第三步：本地预览-关键" class="headerlink" title="第三步：本地预览 (关键)"></a>第三步：本地预览 (关键)</h3><p>在发布前，先在本地看看效果：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>打开浏览器访问 <code>http://localhost:4000</code>。确认无误后，按下 <code>Ctrl + C</code> 停止预览。</p>
-<h3 id="第四步：推送到-GitHub"><a href="#第四步：推送到-GitHub" class="headerlink" title="第四步：推送到 GitHub"></a>第四步：推送到 GitHub</h3><p>执行一键生成并部署命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>稍等几分钟，你的 GitHub Pages 就会更新内容了。</p>
-<hr>
-<h2 id="4-常见问题备忘"><a href="#4-常见问题备忘" class="headerlink" title="4. 常见问题备忘"></a>4. 常见问题备忘</h2><ul>
-<li><strong>多标签写法</strong>：<code>tags: [标签1, 标签2]</code>。</li>
-<li><strong>图片存放</strong>：建议放在 <code>source/images/</code>，文中引用：<code>![描述](/images/xxx.png)</code>。</li>
-<li><strong>配置文件</strong>：</li>
-<li><code>_config.yml</code> (根目录)：改网站名、改 GitHub 地址。</li>
-<li><code>_config.yml</code> (主题目录)：改菜单、改头像、改评论插件。</li>
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>尝试全局安装 <code>@anthropic-ai/claude-code</code> 时遇到 SSL 证书验证失败：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g @anthropic-ai/claude-code --registry https://registry.npmjs.org/</span><br><span class="line"></span><br><span class="line">npm error code UNABLE_TO_GET_ISSUER_CERT_LOCALLY</span><br><span class="line">npm error errno UNABLE_TO_GET_ISSUER_CERT_LOCALLY</span><br><span class="line">npm error request to https://registry.npmjs.com/@anthropic-ai%2fclaude-code failed, </span><br><span class="line">reason: unable to get <span class="built_in">local</span> issuer certificate</span><br></pre></td></tr></table></figure>
+<h3 id="尝试过的失败方案"><a href="#尝试过的失败方案" class="headerlink" title="尝试过的失败方案"></a>尝试过的失败方案</h3><ol>
+<li><strong>切换至淘宝镜像源</strong> (<code>https://registry.npmmirror.com/</code>) - 同样报错</li>
+<li><strong>检查系统时间</strong> - 时间同步正常</li>
+<li><strong>使用 <code>--strict-ssl=false</code></strong> - 可绕过但非根本解决</li>
+</ol>
+<h2 id="根因分析"><a href="#根因分析" class="headerlink" title="根因分析"></a>根因分析</h2><p>在 <strong>Node.js v22</strong> + <strong>macOS Tahoe</strong> 环境下，Node 的 OpenSSL 配置无法自动定位系统根证书存储位置。尽管 <code>/etc/ssl/cert.pem</code> 文件存在且有效，但 Node v22 的证书自动检测机制在该 macOS 版本上出现故障，导致无法建立 TLS 信任链。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="临时解决（单次会话）"><a href="#临时解决（单次会话）" class="headerlink" title="临时解决（单次会话）"></a>临时解决（单次会话）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> NODE_EXTRA_CA_CERTS=/etc/ssl/cert.pem</span><br><span class="line">npm install -g @anthropic-ai/claude-code --registry https://registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+<h3 id="永久解决（推荐）"><a href="#永久解决（推荐）" class="headerlink" title="永久解决（推荐）"></a>永久解决（推荐）</h3><p>将环境变量写入 shell 配置文件，避免每次手动设置：</p>
+<p><strong>对于 zsh (macOS 默认)：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export NODE_EXTRA_CA_CERTS=/etc/ssl/cert.pem&#x27;</span> &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure></p>
+<p><strong>对于 bash：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export NODE_EXTRA_CA_CERTS=/etc/ssl/cert.pem&#x27;</span> &gt;&gt; ~/.bash_profile</span><br><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<h2 id="验证修复"><a href="#验证修复" class="headerlink" title="验证修复"></a>验证修复</h2><p>设置环境变量后，重新执行安装命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @anthropic-ai/claude-code --registry https://registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+<p><strong>预期输出：</strong><br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">added <span class="number">1</span> <span class="keyword">package</span> <span class="title">in 3s</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="技术细节补充"><a href="#技术细节补充" class="headerlink" title="技术细节补充"></a>技术细节补充</h2><h3 id="证书文件验证"><a href="#证书文件验证" class="headerlink" title="证书文件验证"></a>证书文件验证</h3><p>确认 macOS 根证书文件存在且有效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -la /etc/ssl/cert.pem</span><br><span class="line"><span class="comment"># 输出示例：-rw-r--r--  1 root  wheel  382456  Jan 1 00:00 /etc/ssl/cert.pem</span></span><br><span class="line"></span><br><span class="line">openssl x509 -<span class="keyword">in</span> /etc/ssl/cert.pem -text -noout | <span class="built_in">head</span> -n 10</span><br><span class="line"><span class="comment"># 应能正常解析证书内容</span></span><br></pre></td></tr></table></figure>
+<h3 id="Node-js-v22-变更说明"><a href="#Node-js-v22-变更说明" class="headerlink" title="Node.js v22 变更说明"></a>Node.js v22 变更说明</h3><p>Node.js v22 更新了 <code>crypto</code> 模块的默认证书加载逻辑：</p>
+<ul>
+<li>移除了部分硬编码路径</li>
+<li>更依赖系统 OpenSSL 配置</li>
+<li>在 macOS Tahoe 上，系统 Keychain 与 OpenSSL 的集成发生变化，导致自动检测失败</li>
 </ul>
-<hr>
+<h3 id="替代方案（如果环境变量无效）"><a href="#替代方案（如果环境变量无效）" class="headerlink" title="替代方案（如果环境变量无效）"></a>替代方案（如果环境变量无效）</h3><p>若上述方案不奏效，可考虑：</p>
+<ol>
+<li><p><strong>使用 Corepack + Yarn：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">corepack <span class="built_in">enable</span></span><br><span class="line">yarn global add @anthropic-ai/claude-code</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>直接下载预构建包：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -L -o claude-code.tgz https://github.com/anthropics/claude-code/releases/latest/download/claude-code-latest.tgz</span><br><span class="line">npm install -g ./claude-code.tgz</span><br><span class="line"><span class="built_in">rm</span> claude-code.tgz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>降级 Node.js 至 v20 LTS：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 nvm 管理版本</span></span><br><span class="line">nvm install 20</span><br><span class="line">nvm use 20</span><br><span class="line">npm install -g @anthropic-ai/claude-code</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="相关错误代码参考"><a href="#相关错误代码参考" class="headerlink" title="相关错误代码参考"></a>相关错误代码参考</h2><table>
+<thead>
+<tr>
+<th>错误代码</th>
+<th>含义</th>
+<th>常见原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UNABLE_TO_GET_ISSUER_CERT_LOCALLY</code></td>
+<td>无法获取本地颁发者证书</td>
+<td>根证书缺失或 Node 无法访问系统证书存储</td>
+</tr>
+<tr>
+<td><code>DEPTH_ZERO_SELF_SIGNED_CERT</code></td>
+<td>自签名证书</td>
+<td>中间人代理或公司防火墙拦截</td>
+</tr>
+<tr>
+<td><code>UNABLE_TO_VERIFY_LEAF_SIGNATURE</code></td>
+<td>无法验证叶证书签名</td>
+<td>证书链不完整</td>
+</tr>
+</tbody>
+</table>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>在 macOS Tahoe 26.2 + Node.js v22.16.0 环境下，通过显式设置 <code>NODE_EXTRA_CA_CERTS</code> 环境变量指向系统根证书文件 (<code>/etc/ssl/cert.pem</code>)，可解决 npm 的 SSL 证书验证失败问题。这是 Node v22 在该 macOS 版本上的已知兼容性问题，建议将环境变量配置持久化到 shell 配置文件中。</p>
 
 
                 <hr>
@@ -276,13 +297,9 @@
 
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/2026/03/30/npm-安装-SSL-证书错误解决记录/" data-toggle="tooltip" data-placement="top" title="npm 安装 SSL 证书错误解决记录">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/2026/01/21/conda-guide/" data-toggle="tooltip" data-placement="top" title="conda_guide">Next Post &rarr;</a>
+                            <a href="/2026/01/21/Hexo-博客维护手册/" data-toggle="tooltip" data-placement="top" title="Hexo 博客维护手册">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -315,7 +332,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
+                          <a class="tag" href="/tags/#npm" title="npm">npm</a>
                         
                     </div>
                 </section>
@@ -355,8 +372,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "kexin";
-    var disqus_identifier = "https://chengxinsun.github.io/2026/01/21/Hexo-%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4%E6%89%8B%E5%86%8C/";
-    var disqus_url = "https://chengxinsun.github.io/2026/01/21/Hexo-%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4%E6%89%8B%E5%86%8C/";
+    var disqus_identifier = "https://chengxinsun.github.io/2026/03/30/npm-%E5%AE%89%E8%A3%85-SSL-%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/";
+    var disqus_url = "https://chengxinsun.github.io/2026/03/30/npm-%E5%AE%89%E8%A3%85-SSL-%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E8%AE%B0%E5%BD%95/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
