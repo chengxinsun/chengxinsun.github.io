@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          Claude Code Top 5 Plugins 推荐 - shane的博客 | Shane&#39;s Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://chengxinsun.github.io/2026/04/02/claude-code-top-5-plugins/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/hux-blog.min.css">
+
+
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Shane&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archives/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://chengxinsun.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#Claude Code" title="Claude Code">Claude Code</a>
+                        
+                          <a class="tag" href="/tags/#AI开发" title="AI开发">AI开发</a>
+                        
+                          <a class="tag" href="/tags/#开发工具" title="开发工具">开发工具</a>
+                        
+                          <a class="tag" href="/tags/#插件推荐" title="插件推荐">插件推荐</a>
+                        
+                    </div>
+                    <h1>Claude Code Top 5 Plugins 推荐</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by Shane on
+                        2026-04-02
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着 AI 辅助编程的普及，Claude Code 已经成为众多开发者的得力助手。而插件生态的丰富更是让 Claude Code 的能力得到了极大的扩展。今天我要分享的是 5 个最实用的 Claude Code 插件，它们能够显著提升开发效率、代码质量和安全性。</p>
+<span id="more"></span>
+<hr>
+<h2 id="1-Superpowers-完整的软件开发工作流框架"><a href="#1-Superpowers-完整的软件开发工作流框架" class="headerlink" title="1. Superpowers - 完整的软件开发工作流框架"></a>1. Superpowers - 完整的软件开发工作流框架</h2><h3 id="插件概览"><a href="#插件概览" class="headerlink" title="插件概览"></a>插件概览</h3><p><strong>GitHub Stars</strong>: ⭐ 131,029<br><strong>仓库地址</strong>: <a href="https://github.com/obra/superpowers">obra/superpowers</a><br><strong>官方市场</strong>: Anthropic 官方插件市场</p>
+<h3 id="用途与解决问题"><a href="#用途与解决问题" class="headerlink" title="用途与解决问题"></a>用途与解决问题</h3><p>Superpowers 不仅仅是一个插件，更是一套完整的<strong>AI 驱动软件开发方法论</strong>。它解决了以下核心问题：</p>
+<ul>
+<li><strong>开发流程不规范</strong>: AI 助手往往急于写代码，缺乏充分的需求分析和规划</li>
+<li><strong>测试覆盖不足</strong>: 传统开发中测试经常被忽略，导致代码质量难以保证</li>
+<li><strong>代码审查缺失</strong>: 单人开发时缺乏代码审查环节，容易引入低质量代码</li>
+<li><strong>子代理协作混乱</strong>: 无法有效利用多个 AI 代理并行工作</li>
+</ul>
+<h3 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h3><p>Superpowers 提供了一系列<strong>自动触发的工作流技能</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>技能名称</th>
+<th>功能描述</th>
+<th>触发时机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>brainstorming</code></td>
+<td>通过苏格拉底式提问精炼需求，探索替代方案，保存设计文档</td>
+<td>开始编码前</td>
+</tr>
+<tr>
+<td><code>writing-plans</code></td>
+<td>将工作拆分为 2-5 分钟的小任务，每个任务包含精确文件路径和验证步骤</td>
+<td>设计获批后</td>
+</tr>
+<tr>
+<td><code>subagent-driven-development</code></td>
+<td>派遣子代理执行每个任务，进行两阶段审查（规范合规性+代码质量）</td>
+<td>执行计划时</td>
+</tr>
+<tr>
+<td><code>test-driven-development</code></td>
+<td>强制执行红-绿-重构循环：先写失败测试，再写最小实现，最后重构</td>
+<td>实现过程中</td>
+</tr>
+<tr>
+<td><code>requesting-code-review</code></td>
+<td>对照计划审查代码，按严重程度报告问题，关键问题阻止进度</td>
+<td>任务之间</td>
+</tr>
+<tr>
+<td><code>using-git-worktrees</code></td>
+<td>在新分支上创建隔离工作区，运行项目设置，验证干净测试基线</td>
+<td>设计获批后</td>
+</tr>
+</tbody>
+</table>
+<h3 id="安装与使用"><a href="#安装与使用" class="headerlink" title="安装与使用"></a>安装与使用</h3><p><strong>Claude Code 官方市场安装</strong>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/plugin install superpowers@claude-plugins-official</span><br></pre></td></tr></table></figure></p>
+<p><strong>通过 Marketplace 安装</strong>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/plugin marketplace add obra/superpowers-marketplace</span><br><span class="line">/plugin install superpowers@superpowers-marketplace</span><br></pre></td></tr></table></figure></p>
+<p><strong>使用示例</strong>:<br>当你说 “帮我规划这个功能” 或 “调试这个问题” 时，Superpowers 会自动调用相关技能，无需额外操作。</p>
+<h3 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h3><ol>
+<li><strong>遵循 TDD 流程</strong>: Superpowers 会强制要求先写测试，不要试图绕过</li>
+<li><strong>批准设计文档</strong>: 在继续之前仔细阅读并批准设计文档的每个部分</li>
+<li><strong>利用子代理</strong>: 让 Superpowers 自动派遣子代理并行处理独立任务</li>
+<li><strong>定期更新</strong>: 使用 <code>/plugin update superpowers</code> 获取最新技能</li>
+</ol>
+<hr>
+<h2 id="2-Ralph-Loop-自主-AI-开发循环"><a href="#2-Ralph-Loop-自主-AI-开发循环" class="headerlink" title="2. Ralph Loop - 自主 AI 开发循环"></a>2. Ralph Loop - 自主 AI 开发循环</h2><h3 id="插件概览-1"><a href="#插件概览-1" class="headerlink" title="插件概览"></a>插件概览</h3><p><strong>GitHub Stars</strong>: ⭐ 8,258<br><strong>仓库地址</strong>: <a href="https://github.com/frankbria/ralph-claude-code">frankbria/ralph-claude-code</a><br><strong>许可</strong>: MIT License</p>
+<h3 id="用途与解决问题-1"><a href="#用途与解决问题-1" class="headerlink" title="用途与解决问题"></a>用途与解决问题</h3><p>Ralph Loop 是一个<strong>自主 AI 开发循环系统</strong>，灵感来自 Geoffrey Huntley 的 Ralph 技术。它主要解决：</p>
+<ul>
+<li><strong>人工干预频繁</strong>: 传统 AI 辅助开发需要频繁的人工提示和引导</li>
+<li><strong>无限循环风险</strong>: 自主代理可能陷入无限循环，消耗大量 API 额度</li>
+<li><strong>缺乏进度跟踪</strong>: 长时间运行的 AI 任务缺乏透明的进度展示</li>
+<li><strong>上下文丢失</strong>: 多轮对话后上下文容易丢失，导致开发偏离目标</li>
+</ul>
+<h3 id="核心功能-1"><a href="#核心功能-1" class="headerlink" title="核心功能"></a>核心功能</h3><ol>
+<li><p><strong>智能双条件退出机制</strong>:</p>
+<ul>
+<li>需要同时满足：完成指标 &gt;= 2 <strong>且</strong> EXIT_SIGNAL: true</li>
+<li>防止过早退出或无限循环</li>
+</ul>
+</li>
+<li><p><strong>速率限制与熔断器</strong>:</p>
+<ul>
+<li>每小时 100 次调用限制（可配置）</li>
+<li>熔断器在检测到无进度或重复错误时自动断开</li>
+</ul>
+</li>
+<li><p><strong>会话连续性</strong>:</p>
+<ul>
+<li><code>--resume</code> 标志保持会话上下文</li>
+<li>24 小时会话过期保护</li>
+</ul>
+</li>
+<li><p><strong>实时监控</strong>:</p>
+<ul>
+<li><code>--monitor</code> 标志启动 tmux 集成监控</li>
+<li><code>--live</code> 标志提供实时流式输出</li>
+</ul>
+</li>
+</ol>
+<h3 id="安装与使用-1"><a href="#安装与使用-1" class="headerlink" title="安装与使用"></a>安装与使用</h3><p><strong>一次性安装</strong>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/frankbria/ralph-claude-code.git</span><br><span class="line"><span class="built_in">cd</span> ralph-claude-code</span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure></p>
+<p><strong>项目初始化</strong> (现有项目):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> my-existing-project</span><br><span class="line">ralph-enable  <span class="comment"># 交互式向导</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>启动自主开发</strong>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ralph --monitor  <span class="comment"># 带监控的完整循环</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">my-project<span class="symbol">/</span></span><br><span class="line">├── .ralph<span class="symbol">/</span>                 <span class="comment"># Ralph 配置和状态</span></span><br><span class="line">│   ├── PROMPT.md          <span class="comment"># 主要开发指令</span></span><br><span class="line">│   ├── fix_plan.md        <span class="comment"># 优先级任务列表</span></span><br><span class="line">│   ├── AGENT.md           <span class="comment"># 构建和运行指令</span></span><br><span class="line">│   ├── specs<span class="symbol">/</span>             <span class="comment"># 项目规范</span></span><br><span class="line">│   └── logs<span class="symbol">/</span>              <span class="comment"># 执行日志</span></span><br><span class="line">├── .ralphrc               <span class="comment"># 项目配置文件</span></span><br><span class="line">└── src<span class="symbol">/</span>                   <span class="comment"># 源代码</span></span><br></pre></td></tr></table></figure>
+<h3 id="配置示例"><a href="#配置示例" class="headerlink" title="配置示例"></a>配置示例</h3><p><code>.ralphrc</code> 配置文件:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PROJECT_NAME=<span class="string">&quot;my-project&quot;</span></span><br><span class="line">PROJECT_TYPE=<span class="string">&quot;typescript&quot;</span></span><br><span class="line">MAX_CALLS_PER_HOUR=100</span><br><span class="line">CLAUDE_TIMEOUT_MINUTES=15</span><br><span class="line">ALLOWED_TOOLS=<span class="string">&quot;Write,Read,Edit,Bash(git *),Bash(npm *),Bash(pytest)&quot;</span></span><br><span class="line">SESSION_CONTINUITY=<span class="literal">true</span></span><br><span class="line">SESSION_EXPIRY_HOURS=24</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="3-Firecrawl-网页抓取与数据提取"><a href="#3-Firecrawl-网页抓取与数据提取" class="headerlink" title="3. Firecrawl - 网页抓取与数据提取"></a>3. Firecrawl - 网页抓取与数据提取</h2><h3 id="插件概览-2"><a href="#插件概览-2" class="headerlink" title="插件概览"></a>插件概览</h3><p><strong>GitHub Stars</strong>: ⭐ 31 (Firecrawl CLI 本身更受欢迎)<br><strong>仓库地址</strong>: <a href="https://github.com/firecrawl/firecrawl-claude-plugin">firecrawl/firecrawl-claude-plugin</a><br><strong>官方网站</strong>: <a href="https://firecrawl.dev">firecrawl.dev</a></p>
+<h3 id="用途与解决问题-2"><a href="#用途与解决问题-2" class="headerlink" title="用途与解决问题"></a>用途与解决问题</h3><p>Firecrawl 插件让 Claude Code 具备了<strong>强大的网络数据获取能力</strong>，解决了：</p>
+<ul>
+<li><strong>信息孤岛</strong>: Claude 无法直接访问外部网站获取最新信息</li>
+<li><strong>格式混乱</strong>: 原始网页 HTML 包含大量噪声，不适合 LLM 处理</li>
+<li><strong>反爬限制</strong>: 现代网站有反爬虫机制，直接抓取困难</li>
+<li><strong>JavaScript 渲染</strong>: 许多现代网站需要 JS 执行才能显示内容</li>
+</ul>
+<h3 id="核心功能-2"><a href="#核心功能-2" class="headerlink" title="核心功能"></a>核心功能</h3><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>描述</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Search</strong></td>
+<td>网络搜索，可选抓取结果</td>
+<td>研究技术方案、查找最佳实践</td>
+</tr>
+<tr>
+<td><strong>Scrape</strong></td>
+<td>提取任意网页的干净 Markdown</td>
+<td>获取文档、博客文章</td>
+</tr>
+<tr>
+<td><strong>Map</strong></td>
+<td>发现网站上的所有 URL</td>
+<td>站点结构分析</td>
+</tr>
+<tr>
+<td><strong>Crawl</strong></td>
+<td>提取整个网站的内容</td>
+<td>批量数据采集</td>
+</tr>
+<tr>
+<td><strong>Browser</strong></td>
+<td>启动云浏览器会话，远程执行 Playwright 代码</td>
+<td>复杂交互、需要登录的页面</td>
+</tr>
+</tbody>
+</table>
+<h3 id="安装与使用-2"><a href="#安装与使用-2" class="headerlink" title="安装与使用"></a>安装与使用</h3><p><strong>安装插件</strong>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/plugin  <span class="comment"># 搜索 &quot;firecrawl&quot; 并安装</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>安装 Firecrawl CLI</strong>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g firecrawl-cli</span><br></pre></td></tr></table></figure></p>
+<p><strong>认证</strong>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firecrawl login --browser</span><br><span class="line"><span class="comment"># 或使用 API Key</span></span><br><span class="line">firecrawl login --api-key <span class="string">&quot;fc-YOUR-API-KEY&quot;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><p><strong>搜索并总结</strong>:<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">搜索 <span class="string">&quot;React testing best practices&quot;</span> 并整理关键推荐</span><br></pre></td></tr></table></figure></p>
+<p><strong>抓取文档页面</strong>:<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">抓取 https<span class="punctuation">:</span><span class="comment">//docs.firecrawl.dev/introduction 并总结要点</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>研究主题</strong>:<br><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">研究 AI <span class="built_in">agents</span> 的最新发展并给我一份摘要</span><br></pre></td></tr></table></figure></p>
+<h3 id="输出文件"><a href="#输出文件" class="headerlink" title="输出文件"></a>输出文件</h3><p>结果保存在 <code>.firecrawl/</code> 目录，保持 Claude Code 的上下文窗口清洁:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.firecrawl/search-react_server_components<span class="selector-class">.json</span></span><br><span class="line">.firecrawl/docs<span class="selector-class">.github</span><span class="selector-class">.com-actions-overview</span><span class="selector-class">.md</span></span><br><span class="line">.firecrawl/firecrawl<span class="selector-class">.dev</span>.md</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="4-Code-Review-多代理自动化代码审查"><a href="#4-Code-Review-多代理自动化代码审查" class="headerlink" title="4. Code-Review - 多代理自动化代码审查"></a>4. Code-Review - 多代理自动化代码审查</h2><h3 id="插件概览-3"><a href="#插件概览-3" class="headerlink" title="插件概览"></a>插件概览</h3><p><strong>GitHub Stars</strong>: ⭐ 95,400+ (Claude Code 主仓库)<br><strong>文档地址</strong>: <a href="https://github.com/anthropics/claude-code/tree/main/plugins/code-review">anthropics/claude-code/plugins/code-review</a><br><strong>内置命令</strong>: <code>/code-review</code></p>
+<h3 id="用途与解决问题-3"><a href="#用途与解决问题-3" class="headerlink" title="用途与解决问题"></a>用途与解决问题</h3><p>Code-Review 插件通过<strong>多代理并行审查</strong>提供高质量的自动化代码审查，解决：</p>
+<ul>
+<li><strong>审查者疲劳</strong>: 人工审查大量 PR 容易疲劳，遗漏问题</li>
+<li><strong>主观性强</strong>: 不同审查者标准不一，反馈质量波动大</li>
+<li><strong>误报过多</strong>: 传统自动化工具误报率高，开发者倾向于忽略</li>
+<li><strong>上下文缺失</strong>: 单一代理难以同时关注多个维度（规范、bug、历史）</li>
+</ul>
+<h3 id="核心功能-3"><a href="#核心功能-3" class="headerlink" title="核心功能"></a>核心功能</h3><p><strong>4 个并行审查代理</strong>:</p>
+<ol>
+<li><p><strong>代理 #1 &amp; #2</strong>: CLAUDE.md 合规性审查（双重冗余）</p>
+<ul>
+<li>显式验证指南是否被提及</li>
+<li>确保代码符合项目规范</li>
+</ul>
+</li>
+<li><p><strong>代理 #3</strong>: 明显 Bug 扫描</p>
+<ul>
+<li>专注于变更内容（而非已有问题）</li>
+<li>检测逻辑错误、边界条件、资源泄漏</li>
+</ul>
+</li>
+<li><p><strong>代理 #4</strong>: 历史上下文分析</p>
+<ul>
+<li>通过 git blame 分析代码历史</li>
+<li>发现与历史模式不符的变更</li>
+</ul>
+</li>
+</ol>
+<p><strong>置信度评分系统</strong>:</p>
+<ul>
+<li>0: 不自信，误报</li>
+<li>25: 有些自信，可能是真实的</li>
+<li>50: 中等自信，真实但轻微</li>
+<li>75: 高度自信，真实且重要</li>
+<li>100: 绝对确定，肯定是真实的</li>
+</ul>
+<p><strong>默认阈值</strong>: 80+ 的分数才会被报告</p>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p><strong>本地审查</strong> (输出到终端):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/code-review</span><br></pre></td></tr></table></figure></p>
+<p><strong>作为 PR 评论发布</strong>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/code-review --comment</span><br></pre></td></tr></table></figure></p>
+<h3 id="审查输出格式"><a href="#审查输出格式" class="headerlink" title="审查输出格式"></a>审查输出格式</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">## Code review</span></span><br><span class="line"></span><br><span class="line">Found 3 issues:</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> Missing error handling for OAuth callback (CLAUDE.md says &quot;Always handle OAuth errors&quot;)</span><br><span class="line">https://github.com/owner/repo/blob/abc123.../src/auth.ts#L67-L72</span><br><span class="line"></span><br><span class="line"><span class="bullet">2.</span> Memory leak: OAuth state not cleaned up (bug due to missing cleanup in finally block)</span><br><span class="line">https://github.com/owner/repo/blob/abc123.../src/auth.ts#L88-L95</span><br><span class="line"></span><br><span class="line"><span class="bullet">3.</span> Inconsistent naming pattern (src/conventions/CLAUDE.md says &quot;Use camelCase for functions&quot;)</span><br><span class="line">https://github.com/owner/repo/blob/abc123.../src/utils.ts#L23-L28</span><br></pre></td></tr></table></figure>
+<h3 id="最佳实践-1"><a href="#最佳实践-1" class="headerlink" title="最佳实践"></a>最佳实践</h3><ol>
+<li><strong>维护清晰的 CLAUDE.md</strong>: 明确的指南 = 更好的审查</li>
+<li><strong>信任 80+ 阈值</strong>: 已经过滤了大多数误报</li>
+<li><strong>所有非平凡 PR 都运行</strong>: 养成习惯，作为审查流程的起点</li>
+<li><strong>基于模式更新 CLAUDE.md</strong>: 根据反复出现的审查模式更新指南</li>
+</ol>
+<hr>
+<h2 id="5-Security-Guidance-AI-驱动的安全审查"><a href="#5-Security-Guidance-AI-驱动的安全审查" class="headerlink" title="5. Security Guidance - AI 驱动的安全审查"></a>5. Security Guidance - AI 驱动的安全审查</h2><h3 id="插件概览-4"><a href="#插件概览-4" class="headerlink" title="插件概览"></a>插件概览</h3><p><strong>GitHub Stars</strong>: ⭐ 4,101<br><strong>仓库地址</strong>: <a href="https://github.com/anthropics/claude-code-security-review">anthropics/claude-code-security-review</a><br><strong>类型</strong>: GitHub Action + Claude Code 插件</p>
+<h3 id="用途与解决问题-4"><a href="#用途与解决问题-4" class="headerlink" title="用途与解决问题"></a>用途与解决问题</h3><p>Security Guidance 提供<strong>基于 AI 的深度安全分析</strong>，解决：</p>
+<ul>
+<li><strong>传统 SAST 误报率高</strong>: 静态分析工具基于模式匹配，误报率高</li>
+<li><strong>缺乏上下文理解</strong>: 无法理解代码语义和意图</li>
+<li><strong>安全专业知识门槛</strong>: 需要专业安全知识才能识别复杂漏洞</li>
+<li><strong>合规性要求</strong>: 无法满足安全合规的审查要求</li>
+</ul>
+<h3 id="核心功能-4"><a href="#核心功能-4" class="headerlink" title="核心功能"></a>核心功能</h3><p><strong>AI 驱动的分析</strong>:</p>
+<ul>
+<li>使用 Claude 的高级推理能力检测安全漏洞</li>
+<li>深度语义理解，而非简单模式匹配</li>
+<li>差异感知扫描：PR 只分析变更的文件</li>
+</ul>
+<p><strong>自动 PR 评论</strong>:</p>
+<ul>
+<li>直接在 PR 上评论安全发现</li>
+<li>包含详细解释、严重性评级和修复指导</li>
+<li>过滤误报，聚焦真实漏洞</li>
+</ul>
+<p><strong>语言无关</strong>:</p>
+<ul>
+<li>适用于任何编程语言</li>
+<li>支持 Python、TypeScript、Java、Go、Rust、C/C++ 等</li>
+</ul>
+<h3 id="检测的漏洞类型"><a href="#检测的漏洞类型" class="headerlink" title="检测的漏洞类型"></a>检测的漏洞类型</h3><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>具体漏洞</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>注入攻击</strong></td>
+<td>SQL 注入、命令注入、LDAP 注入、XPath 注入、NoSQL 注入、XXE</td>
+</tr>
+<tr>
+<td><strong>认证与授权</strong></td>
+<td>失效认证、权限提升、不安全的直接对象引用、会话缺陷</td>
+</tr>
+<tr>
+<td><strong>数据暴露</strong></td>
+<td>硬编码密钥、敏感数据日志、信息泄露、PII 处理违规</td>
+</tr>
+<tr>
+<td><strong>加密问题</strong></td>
+<td>弱算法、密钥管理不当、不安全的随机数生成</td>
+</tr>
+<tr>
+<td><strong>输入验证</strong></td>
+<td>缺失验证、不当净化、缓冲区溢出</td>
+</tr>
+<tr>
+<td><strong>业务逻辑</strong></td>
+<td>竞争条件、检查时间到使用时间 (TOCTOU) 问题</td>
+</tr>
+<tr>
+<td><strong>配置安全</strong></td>
+<td>不安全默认值、缺失安全头、宽松的 CORS</td>
+</tr>
+<tr>
+<td><strong>供应链</strong></td>
+<td>脆弱依赖、typo 抢注风险</td>
+</tr>
+<tr>
+<td><strong>代码执行</strong></td>
+<td>反序列化导致的 RCE、pickle 注入、eval 注入</td>
+</tr>
+<tr>
+<td><strong>XSS</strong></td>
+<td>反射型、存储型、DOM-based XSS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p><strong>GitHub Actions 集成</strong>:<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Security</span> <span class="string">Review</span></span><br><span class="line"></span><br><span class="line"><span class="attr">permissions:</span></span><br><span class="line">  <span class="attr">pull-requests:</span> <span class="string">write</span></span><br><span class="line">  <span class="attr">contents:</span> <span class="string">read</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">pull_request:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">security:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">ref:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.event.pull_request.head.sha</span> <span class="string">||</span> <span class="string">github.sha</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">fetch-depth:</span> <span class="number">2</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">anthropics/claude-code-security-review@main</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">comment-pr:</span> <span class="literal">true</span></span><br><span class="line">          <span class="attr">claude-api-key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.CLAUDE_API_KEY</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>Claude Code 内置命令</strong>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/security-review</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置选项"><a href="#配置选项" class="headerlink" title="配置选项"></a>配置选项</h3><table>
+<thead>
+<tr>
+<th>输入</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>claude-api-key</code></td>
+<td>Anthropic Claude API Key</td>
+<td>必填</td>
+</tr>
+<tr>
+<td><code>comment-pr</code></td>
+<td>是否在 PR 上评论</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>upload-results</code></td>
+<td>是否上传结果为工件</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>exclude-directories</code></td>
+<td>排除目录列表</td>
+<td>None</td>
+</tr>
+<tr>
+<td><code>claude-model</code></td>
+<td>使用的 Claude 模型</td>
+<td><code>claude-opus-4-1-20250805</code></td>
+</tr>
+<tr>
+<td><code>claudecode-timeout</code></td>
+<td>分析超时（分钟）</td>
+<td><code>20</code></td>
+</tr>
+<tr>
+<td><code>run-every-commit</code></td>
+<td>每个提交都运行</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="误报过滤"><a href="#误报过滤" class="headerlink" title="误报过滤"></a>误报过滤</h3><p>自动排除以下低影响和误报倾向的发现：</p>
+<ul>
+<li>拒绝服务漏洞</li>
+<li>速率限制问题</li>
+<li>内存/CPU 耗尽问题</li>
+<li>无实际影响的通用输入验证</li>
+<li>开放重定向漏洞</li>
+</ul>
+<p>可针对特定项目的安全目标进行调优。</p>
+<hr>
+<h2 id="对比总结"><a href="#对比总结" class="headerlink" title="对比总结"></a>对比总结</h2><table>
+<thead>
+<tr>
+<th>插件</th>
+<th>主要用途</th>
+<th>Stars</th>
+<th>适用场景</th>
+<th>安装难度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Superpowers</strong></td>
+<td>完整开发工作流</td>
+<td>131k</td>
+<td>所有项目</td>
+<td>⭐ 简单</td>
+</tr>
+<tr>
+<td><strong>Ralph Loop</strong></td>
+<td>自主开发循环</td>
+<td>8.3k</td>
+<td>长期/复杂项目</td>
+<td>⭐⭐ 中等</td>
+</tr>
+<tr>
+<td><strong>Firecrawl</strong></td>
+<td>网页抓取</td>
+<td>31*</td>
+<td>需要外部数据</td>
+<td>⭐ 简单</td>
+</tr>
+<tr>
+<td><strong>Code-Review</strong></td>
+<td>代码审查</td>
+<td>95k**</td>
+<td>团队协作</td>
+<td>⭐ 简单</td>
+</tr>
+<tr>
+<td><strong>Security Guidance</strong></td>
+<td>安全审查</td>
+<td>4.1k</td>
+<td>安全敏感项目</td>
+<td>⭐⭐ 中等</td>
+</tr>
+</tbody>
+</table>
+<p>*Firecrawl CLI 本身更受欢迎<br>**包含在主仓库中</p>
+<hr>
+<h2 id="组合使用建议"><a href="#组合使用建议" class="headerlink" title="组合使用建议"></a>组合使用建议</h2><h3 id="推荐组合-1-全能开发套件"><a href="#推荐组合-1-全能开发套件" class="headerlink" title="推荐组合 1: 全能开发套件"></a>推荐组合 1: 全能开发套件</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Superpowers</span> + <span class="meta">Code</span>-Review + Security Guidance</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Superpowers 规范开发流程</li>
+<li>Code-Review 确保代码质量</li>
+<li>Security Guidance 保障安全性</li>
+</ul>
+<h3 id="推荐组合-2-自主开发套件"><a href="#推荐组合-2-自主开发套件" class="headerlink" title="推荐组合 2: 自主开发套件"></a>推荐组合 2: 自主开发套件</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ralph <span class="keyword">Loop</span> + Firecrawl + <span class="keyword">Security</span> Guidance</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Ralph Loop 实现长时间自主开发</li>
+<li>Firecrawl 获取外部信息</li>
+<li>Security Guidance 定期安全检查</li>
+</ul>
+<h3 id="推荐组合-3-企业级审查套件"><a href="#推荐组合-3-企业级审查套件" class="headerlink" title="推荐组合 3: 企业级审查套件"></a>推荐组合 3: 企业级审查套件</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Superpowers</span> + <span class="meta">Code</span>-Review + Security Guidance</span><br></pre></td></tr></table></figure>
+<ul>
+<li>适合企业级项目</li>
+<li>完整的规范、质量、安全三重保障</li>
+<li>满足合规要求</li>
+</ul>
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这 5 个插件代表了 Claude Code 生态中最强大的扩展能力：</p>
+<ol>
+<li><strong>Superpowers</strong> 提供了<strong>方法论层面的提升</strong>，让 AI 辅助开发更加规范和专业</li>
+<li><strong>Ralph Loop</strong> 释放了<strong>自主开发</strong>的潜力，让 Claude 能够独立完成复杂任务</li>
+<li><strong>Firecrawl</strong> 打破了<strong>信息边界</strong>，让 Claude 能够访问外部世界</li>
+<li><strong>Code-Review</strong> 提供了<strong>质量保障</strong>，让单人开发也能享受代码审查的好处</li>
+<li><strong>Security Guidance</strong> 守护了<strong>安全底线</strong>，在开发早期就发现潜在漏洞</li>
+</ol>
+<p>无论你是个人开发者还是团队成员，这些插件都能显著提升你的开发效率和代码质量。建议从 Superpowers 开始，逐步引入其他插件，打造属于你的 AI 驱动开发工作流。</p>
+<hr>
+<h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><ul>
+<li><a href="https://github.com/obra/superpowers">Superpowers GitHub</a></li>
+<li><a href="https://github.com/frankbria/ralph-claude-code">Ralph Loop GitHub</a></li>
+<li><a href="https://docs.firecrawl.dev/">Firecrawl 文档</a></li>
+<li><a href="https://github.com/anthropics/claude-code-security-review">Claude Code Security Review</a></li>
+<li><a href="https://code.claude.com/docs">Claude Code 官方文档</a></li>
+</ul>
+<hr>
+<p><strong>有任何问题或建议？欢迎在评论区留言交流！</strong></p>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2026/03/30/npm-安装-SSL-证书错误解决记录/" data-toggle="tooltip" data-placement="top" title="npm 安装 SSL 证书错误解决记录">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Claude Code" title="Claude Code">Claude Code</a>
+                        
+                          <a class="tag" href="/tags/#AI开发" title="AI开发">AI开发</a>
+                        
+                          <a class="tag" href="/tags/#开发工具" title="开发工具">开发工具</a>
+                        
+                          <a class="tag" href="/tags/#插件推荐" title="插件推荐">插件推荐</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://github.com/sohutv" target="_blank">SohuTv</a></li>
+                    
+                        <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">Foo</a></li>
+                    
+                        <li><a href="#" target="_blank">Bar</a></li>
+                    
+                        <li><a href="#" target="_blank">Example Friends</a></li>
+                    
+                        <li><a href="#" target="_blank">It helps SEO</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "kexin";
+    var disqus_identifier = "https://chengxinsun.github.io/2026/04/02/claude-code-top-5-plugins/";
+    var disqus_url = "https://chengxinsun.github.io/2026/04/02/claude-code-top-5-plugins/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/XX">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/XX">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/XX">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/XX">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/XX">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/xx">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Shane&#39;s Blog 2026 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://chengxinsun.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA';
+    var _gaDomain = 'suncheng.xin';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="https://chengxinsun.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
